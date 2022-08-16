@@ -1,12 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project-1</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>batch-8 assingments</title>
+  <link rel="stylesheet" href="batch-8.css">
+  <script src="/batch-8.js"></script>
 </head>
+
 <body>
-    <h1>heoo world</h1>
+  <section class="question-button">
+    <button class="qb qb1" onclick="openCity(event, 'qst1')">question 1</button>
+    <button class="qb qb2" onclick="openCity(event, 'qst2')">question 2</button>
+    <button class="qb qb3" onclick="openCity(event, 'qst3')">question 3</button>
+    <button class="qb qb4" onclick="openCity(event, 'qst4')">question 4</button>
+    <button class="qb qb5" onclick="openCity(event, 'qst5')">question 5</button>
+    <button class="qb qb6" onclick="openCity(event, 'qst6')">question 6</button>
+    <button class="qb qb7" onclick="openCity(event, 'qst7')">question 7</button>
+    <button class="qb qb8" onclick="openCity(event, 'qst8')">question 8</button>
+    <button class="qb qb9" onclick="openCity(event, 'qst9')">question 9</button>
+    <button class="qb qb10" onclick="openCity(event, 'qst10')">question 10</button>
+
+
+  </section>
+  <div id="qst1" class="main">
+    <h1><span> Question # 1 </span></h1>
+    <p> Write a JavaScript function that reverse a number.
+      Example x = 32243;
+      Expected Output : 34223 </p><br>
+    <div class="userinput"><label for="input1">reverse number -> <input spellcheck="false" type="text" id="input1"
+          placeholder="user input" onkeyup="reverse_number();"></label>
+      <label for="input_1">result -> <input type="text" id="input_1" placeholder="answer"></label>
+      <button id="answer1" class="answer-button"
+        onclick="document.getElementById('input1').value='',document.getElementById('input_1').value=''">reset</button>
+
+    </div>
+    <br>
+    <hr><br>
+    <p id="answerq1"></p>
+
+  </div>
+
+
+  <div id="qst2" class="main">
+    <h1> <span>Question # 2</span></h1>
+    <p> Write a JavaScript function that checks whether a passed string is palindrome or not?
+      A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam, radar or level.
+
+    </p><br>
+    <div class="userinput"><label for="input2">palindrome -> <input type="text" id="input2" placeholder="madam"></label>
+      <button id="answer2" class="answer-button" onclick=check_Palindrome();>answer</button>
+      <p id="answerq2"></p>
+    </div>
+  </div>
+
+
+  <!--  -->
+  <div id="qst3" class="main">
+    <h1> <span>Question # 3</span></h1>
+    <p> Write a JavaScript function that generates all combinations of a string.
+      Example string : 'dog'
+    </p><br>
+    <div class="userinput"><label for="input3">string combination -> <input type="text" id="input3"
+          placeholder="dog"></label>
+      <!-- <button id="answer3" class="answer-button" onclick=substrings();>answer</button> -->
+      <p id="answerq3">answer in console press f12</p>
+    </div>
+
+  </div>
+  <!--  -->
+  <!--  -->
+  <div id="qst4" class="main">
+    <h1> <span>Question # 4</span></h1>
+    <p> Write a JavaScript function that returns a passed string with letters in alphabetical order.
+      Example string : 'webmaster'
+      Expected Output : 'abeemrstw'
+      Assume punctuation and numbers symbols are not included in the passed string.
+    </p><br>
+    <div class="userinput"><label for="input4">string --> <input type="text" id="input4"
+          placeholder="String With Letters"> <button id="answer4" class="answer-button" onclick=alpha()>answer</button>
+
+        <button class="answer-button" type="reset"
+          onclick="document.getElementById('answerq4').innerHTML='', document.getElementById('input4').value=''">clear</button>
+      </label><br>
+      <hr>
+      <P id="answerq4"></P><br>
+    </div>
+
+  </div>
+  <!--  -->
+  <!--  -->
+  <div id="qst5" class="main">
+    <h1> <span>Question # 5</span></h1>
+    <p> Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of
+      the string in upper case.
+      Example string : <span style="text-transform: lowercase;">'the quick brown fox'</span>
+      Expected Output : 'The Quick Brown Fox '
+    </p><br>
+    <div class="userinput"><label for="input5">upper case --> <input style="text-transform:lowercase;"
+          spellcheck="false" type="text" id="input5" placeholder="toUpperCase">
+        <button type="button" class="answer-button" onclick="upperCase()">answer</button>
+      </label>
+      <label for="input_5">result -> <input type="text" id="input_5" placeholder="answer"></label>
+      <button id="answer1" class="answer-button"
+        onclick="document.getElementById('input5').value='',document.getElementById('input_5').value=''">reset</button>
+
+    </div>
+
+
+  </div>
+  <!--  -->
+  <!--  -->
+  <div id="qst6" class="main">
+    <h1> <span>Question # 6</span></h1>
+    <p> Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
+      Example string : 'Web Development Tutorial'
+      Expected Output : 'Development'
+    </p><br>
+    <div class="userinput">
+      <label for="input6">longest word within the string. <textarea id="input6" placeholder="write text"></textarea>
+
+      </label>
+      <button type="button" class="answer-button" onclick="longestWord()">answer</button>
+      <button id="answer6" class="answer-button"
+        onclick="document.getElementById('input6').value='',document.getElementById('answerq6').innerHTML=''">reset</button>
+
+      <p id="answerq6"></p>
+
+    </div>
+
+  </div>
+  <!--  -->
+  <!--  -->
+  <div id="qst7" class="main">
+    <h1> <span>Question # 7</span></h1>
+    <p> Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the
+      string.
+      Example string : 'The quick brown fox'
+      Expected Output : 5
+    </p><br>
+    <div class="userinput">
+      <label for="input7">counts the number of vowels <input type="text" id="input7" placeholder="find vowels "></label>
+      <button id="answer7" class="answer-button" onclick="findVowels();">answer</button>
+      <button id="answer1" class="answer-button"
+        onclick="document.getElementById('input7').value='',document.getElementById('answerq7').innerHTML=''">reset</button>
+      <br>
+      <hr>
+      <p id="answerq7"></p>
+
+
+
+    </div>
+  </div>
+  <!--  -->
+  <!--  -->
+  <div id="qst8" class="main">
+    <h1> <span>Question # 8</span></h1>
+    <p> Write a JavaScript function that accepts a number as a parameter and check the number is prime or not.
+      Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1
+      and itself.
+
+    </p><br>
+    <div class="userinput">
+      <label for="input8"> check prime number <input type="number" id="input8" placeholder="number"></label>
+      <button id="answer8" class="answer-button" onclick="primeNumber();">answer</button>
+      <button id="answer1" class="answer-button"
+        onclick="document.getElementById('input8').value='',document.getElementById('input_8').innerHTML=''">reset</button>
+
+      <p id="input_8"></p>
+    </div>
+
+  </div>
+  <!--  -->
+  <!--  -->
+  <div id="qst9" class="main">
+    <h1> <span>Question # 9</span></h1>
+    <p> Write a JavaScript function which accepts an argument and returns the type.
+      Note : There are six possible values that typeof returns: object, boolean, function, number, string, and
+      undefined.
+
+    </p><br>
+    <label for="input9"></label>
+    <p id="answerq9">answer in console press f12</p>
+    <button id="answer9" class="answer-button" onclick="detect_data_type()">answer</button>
+  </div>
+  <!--  -->
+  <!--  -->
+  <div id="qst10" class="main">
+    <h1> <span>Question # 10</span></h1>
+    <p> Write a JavaScript function which will take an array of numbers stored and find the second lowest and second
+      greatest numbers, respectively.
+      Sample array : [1,2,3,4,5]
+      Expected Output : 2,4
+
+    </p><br>
+    <p id="answerq10">answer in console press f12</p>
+    <button id="answer10" class="answer-button" onclick="Second_Greatest_Lowest();">answer</button>
+  </div>
+  <!--  -->
+<script>
+  
+//q1
+function reverse_number() {
+  var inputuser = document.getElementById("input1").value;
+
+  var empty = "";
+  for (i = inputuser.length - 1; i >= 0; i--) {
+
+    empty = empty + inputuser[i];
+  }
+  document.getElementById("input_1").value = empty;
+}
+
+
+//q2
+function check_Palindrome() {
+  let myValue = document.getElementById('input2').value;
+
+  let userInputValue = myValue.split("").reverse().join("");
+
+  if (myValue == userInputValue) {
+
+    document.getElementById("answerq2").innerHTML = myValue + " - " + " is palindrome";
+  } else {
+    document.getElementById("answerq2").innerHTML = myValue + " - " + " is not ! palindrome";
+
+  }
+
+}
+
+
+//////////////////////////////q3
+
+
+function substrings(str1) {
+  var array1 = [];
+  for (var x = 0, y = 1; x < str1.length; x++, y++) {
+    array1[x] = str1.substring(x, y);
+  }
+  var combi = [];
+  var temp = "";
+  var slent = Math.pow(2, array1.length);
+
+  for (var i = 0; i < slent; i++) {
+    temp = "";
+    for (var j = 0; j < array1.length; j++) {
+      if ((i & Math.pow(2, j))) {
+        temp += array1[j];
+      }
+    }
+    if (temp !== "") {
+      combi.push(temp);
+    }
+  }
+  console.log("answer the question 3 ")
+  console.log(combi.join("\n"));
+}
+
+substrings("dog");
+
+
+
+
+
+
+//q4
+
+function alpha() {
+  var str = document.getElementById('input4').value;
+  var result = str.split('').sort().join('');
+  document.getElementById("answerq4").innerHTML = "Alphabetical Order --> " + "" + result;
+}
+
+////////////   q5
+
+function upperCase(upc) {
+  var upc = document.getElementById("input5").value;
+  var abc = upc.toUpperCase();
+
+
+
+  var array1 = upc.split(' ');
+  var newarray1 = [];
+
+  for (var x = 0; x < array1.length; x++) {
+    newarray1.push(array1[x].charAt(0).toUpperCase() + array1[x].slice(1));
+  }
+  newarray1.join(' ');
+  document.getElementById("input_5").value = newarray1;
+
+}
+
+
+/////////////////////////////////  q6
+function longestWord() {
+  var str = document.getElementById("input6").value;
+  var array1 = str.match(/\w[a-z]{0,}/gi);
+  var result = array1[0];
+
+  for (var x = 1; x < array1.length; x++) {
+    if (result.length < array1[x].length) {
+      result = array1[x];
+    }
+  }
+
+  document.getElementById("answerq6").innerHTML = "the longes Word is  -->" + "'" + result + "'";
+}
+
+/////////////////////////////////// q7
+function findVowels() {
+  var vow = document.getElementById("input7").value;
+  var vl = "aeiouAEIOU";
+  var count = 0;
+  for (v = 0; v < vow.length; v++) {
+    if (vl.indexOf(vow[v]) !== -1) { count = count + 1 }
+
+  }
+
+  document.getElementById("answerq7").innerHTML = "your's sentence have (" + count + ") vowels";
+}
+
+///////////////////////////////////q8
+
+function primeNumber() {
+  var prime_Number = document.getElementById("input8").value;
+  var prime_Number2 = true;
+  for (i = 2; i < prime_Number; i++) {
+    if (prime_Number % i === 0) {
+      prime_Number2 = false;
+    }
+  }
+  if (prime_Number2 === true) {
+    document.getElementById("input_8").innerHTML = prime_Number + " is a prime number ";
+
+
+  } else {
+    document.getElementById("input_8").innerHTML = prime_Number2 + " not a prime number";
+
+  }
+
+
+
+
+}
+
+////////////////////////////////////// q9
+
+
+function detect_data_type(value1) {
+  var dtypes = [Function, RegExp, Number, String, Boolean, Object];
+  var x, len;
+
+  if (typeof value1 === "object" || typeof value1 === "function") {
+    for (x = 0, len = dtypes.length; x < len; x++) {
+      if (value1 instanceof dtypes[x]) {
+        return dtypes[x];
+
+      }
+    }
+  }
+
+
+  return typeof value1;
+}
+console.log("answer the question 9")
+console.log(detect_data_type(123));
+console.log(detect_data_type("tree"));
+console.log(detect_data_type(true));
+
+
+
+///////////////////// 10
+
+
+
+function Second_Greatest_Lowest(arr_num) {
+  arr_num.sort(function (x, y) {
+    return x - y;
+  });
+  var uniqa = [arr_num[0]];
+  var result = [];
+
+  for (var j = 1; j < arr_num.length; j++) {
+    if (arr_num[j - 1] !== arr_num[j]) {
+      uniqa.push(arr_num[j]);
+    }
+  }
+  result.push(uniqa[1], uniqa[uniqa.length - 2]);
+  return result.join(',');
+}
+console.log("answer the question 10 ")
+console.log(Second_Greatest_Lowest([1, 2, 3, 4, 5]));
+
+
+
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("main");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("qb");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+
+</script>
+
 </body>
+
 </html>
